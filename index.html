@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#10243a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ברצלונה 27">
+<title>ברצלונה 2027</title>
+<meta name="description" content="הטיול המשפחתי לספרד, אוגוסט 2027: PortAventura, שייט וברצלונה.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Suez+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">ברצלונה 27</a>
+    <nav class="links" aria-label="ניווט">
+      <a href="#route">המסלול</a>
+      <a href="#days">יום אחר יום</a>
+      <a href="#hotels">מלונות</a>
+      <a href="#tips">טיפים</a>
+    </nav>
+    <button class="docs-btn" id="pack-btn" type="button" aria-haspopup="dialog" aria-label="רשימת ציוד" title="רשימת ציוד">📋</button>
+    <button class="docs-btn todo-btn" id="todo-btn" type="button" aria-haspopup="dialog" aria-label="מה עוד צריך להזמין" title="מה עוד צריך להזמין">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6.5 17.5c2.2 1.4 4.3 3.6 5.8 6.6C15.6 15.8 20.8 9.6 26.5 6"/></svg>
+      <span class="todo-badge" id="todo-badge"></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="פארק גואל, ומאחוריו העיר והים"></div>
+    <div class="birds" aria-hidden="true">
+      <span class="bird" style="--y:13%;--s:1;--t:26s;--d:-4s"><svg viewBox="0 0 26 12"><path d="M1 7Q7 0 13 7Q19 0 25 7"/></svg></span>
+      <span class="bird" style="--y:19%;--s:.7;--t:31s;--d:-12s"><svg viewBox="0 0 26 12"><path d="M1 7Q7 0 13 7Q19 0 25 7"/></svg></span>
+      <span class="bird" style="--y:9%;--s:.55;--t:36s;--d:-20s"><svg viewBox="0 0 26 12"><path d="M1 7Q7 0 13 7Q19 0 25 7"/></svg></span>
+      <span class="bird" style="--y:24%;--s:.85;--t:29s;--d:-1s"><svg viewBox="0 0 26 12"><path d="M1 7Q7 0 13 7Q19 0 25 7"/></svg></span>
+    </div>
+    <button class="sea-sound" id="sea-sound" type="button" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span id="sea-label">קול הים</span></button>
+    <div class="hero-inner">
+      <p class="kicker">10-24 באוגוסט 2027</p>
+      <h1>ברצלונה.<br>ביחד.</h1>
+      <p class="lead">פארקים, שבוע בים, וסיום בברצלונה. שלוש משפחות, 12 איש, 14 לילות.</p>
+      <p class="countdown" id="countdown" aria-live="polite">
+        עוד <b id="cd-days">–</b> ימים, <b id="cd-hours">–</b> שעות ו־<b id="cd-min">–</b> דקות להמראה
+      </p>
+      <p class="cd-label" id="cd-label"></p>
+    </div>
+    <a class="photo-credit" href="https://unsplash.com/photos/aX5NLrKgRBc" target="_blank" rel="noopener">צילום: Dorian D1, Unsplash</a>
+  </section>
+
+  <section class="today hidden" id="today">
+    <div class="wrap">
+      <h2 class="h-today">היום בטיול</h2>
+      <div id="today-card"></div>
+    </div>
+  </section>
+
+  <section class="section" id="route">
+    <div class="wrap">
+      <h2>המסלול</h2>
+      <p class="sub">נוחתים בברצלונה ונוסעים דרומה לפארקים של PortAventura, משם יוצאים לשבוע בים, ומסיימים בברצלונה.</p>
+      <ol class="journey" id="route-cards"></ol>
+    </div>
+  </section>
+
+  <section class="section" id="days">
+    <div class="wrap">
+      <h2>יום אחר יום</h2>
+      <p class="sub">בבוקר פארק או אטרקציה, בצהריים בריכה, בערב יוצאים. וליעקב וטלי יש בכל יום חלופה רגועה. השייט עוד בתכנון, ויתמלא כשנסגור.</p>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="stop-banner" id="stop-banner" role="img" aria-label="תמונה מהיעד"></div>
+      <div class="days" id="day-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="hotels">
+    <div class="wrap">
+      <h2>איפה ישנים</h2>
+      <div class="hotels" id="hotel-cards"></div>
+    </div>
+  </section>
+
+  <section class="section" id="family">
+    <div class="wrap">
+      <h2>מי נוסע</h2>
+      <p class="sub">12 איש, שלוש משפחות.</p>
+      <div class="family">
+        <p><b>הדר וארנון</b> עם איתן, ירדן ותמר</p>
+        <p><b>חן ואיתי</b> עם אורי, עידו ועומר</p>
+        <p><b>יעקב וטלי</b>, סבא וסבתא</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tips">
+    <div class="wrap">
+      <h2>חשוב לזכור</h2>
+      <dl class="tips">
+        <div><dt>כייסים</dt><dd>בברצלונה, ובעיקר ברמבלה, במטרו ובחוף, טלפון וארנק שומרים בכיס קדמי, ותיק סגור מקדימה.</dd></div>
+        <div><dt>חום</dt><dd>אוגוסט חם מאוד. מים, כובע וקרם הגנה. את המתקנים הגדולים עושים בבוקר ובערב, ובצהריים בריכה.</dd></div>
+        <div><dt>הסעות</dt><dd>מיניוואן לכל משפחה, לפי שעת הנחיתה שלה. הפרטים ברשימה האדומה ✓ למעלה.</dd></div>
+        <div><dt>ליעקב וטלי</dt><dd>המלון ב־PortAventura צמוד לכניסה לפארק, אז חוזרים לנוח מתי שרוצים. בכל יום יש חלופה רגועה.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap"><p>נבנה עבור המשפחה, ומתעדכן לאורך התכנון.</p><p class="credits" id="photo-credits"></p></div>
+</footer>
+
+<div class="docs" id="pack" role="dialog" aria-modal="true" aria-label="רשימת ציוד" aria-hidden="true">
+  <div class="docs-card">
+    <div class="ai-head">
+      <div class="ai-title"><span class="ai-mini" aria-hidden="true">📋</span><div><b>רשימת ציוד</b><small id="pack-count">מסמנים מה שנארז. נשמר בטלפון הזה</small></div></div>
+      <button class="ai-close" id="pack-close" aria-label="סגירה">✕</button>
+    </div>
+    <div class="docs-body" id="pack-body"></div>
+  </div>
+</div>
+
+<div class="docs" id="todo" role="dialog" aria-modal="true" aria-label="מה עוד צריך להזמין" aria-hidden="true">
+  <div class="docs-card">
+    <div class="ai-head">
+      <div class="ai-title"><span class="ai-mini todo-mini" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6.5 17.5c2.2 1.4 4.3 3.6 5.8 6.6C15.6 15.8 20.8 9.6 26.5 6"/></svg></span><div><b>מה עוד צריך להזמין</b><small id="todo-count">לפי תאריך. לוחצים על שורה לפרטים ולקישור</small></div></div>
+      <button class="ai-close" id="todo-close" aria-label="סגירה">✕</button>
+    </div>
+    <div class="docs-body" id="todo-body"></div>
+  </div>
+</div>
+
+<!-- בכל עדכון מעלים את ?v= כדי שהטלפונים לא ישמרו עותק ישן. -->
+<script src="data.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
