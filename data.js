@@ -8,7 +8,7 @@ window.TRIP = {
   end: '2027-08-24T15:50:00+03:00',
 
   // חלקים שכבויים בגרסה הראשונה. הקוד שלהם נשאר ב־app.js, ומדליקים כאן כשמוכנים.
-  features: { food: false, docs: false, ai: false },
+  features: { food: false, docs: true, ai: false },
 
   stops: [
     {
@@ -231,5 +231,6 @@ window.TRIP = {
   // עוד לא בשימוש: קוקו, המסמכים ומדור האוכל כבויים (features למעלה).
   food: {},
   aiQuickQuestions: [],
-  aiEndpoint: ''
+  // השרת של תיקיית המסמכים (Cloudflare). הקבצים יוצאים ממנו רק עם קוד המשפחה.
+  aiEndpoint: 'https://trip-bcn27-docs.trip-ap27-assistant.workers.dev'
 };
