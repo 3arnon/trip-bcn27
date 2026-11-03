@@ -212,7 +212,7 @@ window.TRIP = {
     pa: '1773431170132-75cbd6dc3323', cruise: '1583157048761-ac1dba033233', bcn: '1583422409516-2895a77efded',
     pahotel: '1758812598083-3793dd46195f', ship: '1768270181731-b4234ef5c673', bcnhotel: '1579282240050-352db0a14c21'
   },
-  photoCredits: 'Dorian D1, Anakin, Josiah Weiss, Logan Armstrong, Leslie Heintz, Andy Wang, Theodor Vasile',
+  photoCredits: 'BlueChase1333 (Wikimedia), Anakin, Josiah Weiss, Logan Armstrong, Leslie Heintz, Andy Wang, Theodor Vasile',
 
   // עוד לא בשימוש: קוקו, המסמכים ומדור האוכל כבויים (features למעלה).
   food: {},

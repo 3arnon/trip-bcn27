@@ -49,7 +49,8 @@ bdi { unicode-bidi: isolate; }
 
 /* HERO */
 .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; color: #fff; background: #10243a; }
-.hero-bg { position: absolute; inset: -3%; background: url('https://images.unsplash.com/photo-1630219694734-fe47ab76b15e?w=2400&q=80&auto=format&fit=crop') 50% 55% / cover no-repeat; translate: 0 var(--py, 0px); animation: drift 40s ease-in-out infinite alternate; }
+/* הרקע: Legend of the Seas, האונייה של השייט (Wikimedia Commons, רישיון CC0) */
+.hero-bg { position: absolute; inset: -3%; background: url('https://upload.wikimedia.org/wikipedia/commons/1/14/Legend_of_the_Seas_%28cropped%29.png') 50% 45% / cover no-repeat; translate: 0 var(--py, 0px); animation: drift 40s ease-in-out infinite alternate; }
 @keyframes drift { from { transform: scale(1); } to { transform: scale(1.07) translate(-1.2%, -.8%); } }
 .hero::after { content: ''; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(180deg, rgba(3, 30, 40, .4) 0%, rgba(3, 30, 40, 0) 26%, rgba(3, 30, 40, .08) 52%, rgba(3, 26, 36, .78) 100%); }
@@ -494,7 +495,7 @@ h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(
   .links { gap: 16px; }
   .section { padding: 72px 0; }
   .sub { font-size: 18px; }
-  .hero-bg { background-position: 74% 40%; }
+  .hero-bg { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Legend_of_the_Seas_%28cropped%29.png/1280px-Legend_of_the_Seas_%28cropped%29.png'); background-position: 72% 45%; }
   .hero-inner { padding-bottom: 12vh; }
   .countdown { font-size: 15px; padding: 9px 16px; }
   .photo-credit { left: auto; right: 16px; }
